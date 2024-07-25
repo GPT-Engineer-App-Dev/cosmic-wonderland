@@ -213,6 +213,42 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="container mx-auto py-16 relative z-10">
+        <h2 className="text-4xl font-bold mb-8 text-center">Upcoming Space Events</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <EventCard
+            date="2024 Q4"
+            title="Artemis II Mission"
+            description="NASA's first crewed mission to orbit the Moon since Apollo, part of the Artemis program."
+          />
+          <EventCard
+            date="2025"
+            title="JUICE Mission Arrival"
+            description="ESA's Jupiter Icy Moons Explorer will arrive at Jupiter to study its moons."
+          />
+          <EventCard
+            date="2026"
+            title="ExoMars Rover Launch"
+            description="ESA and Roscosmos plan to launch the Rosalind Franklin rover to Mars."
+          />
+          <EventCard
+            date="August 12, 2026"
+            title="Perseids Meteor Shower Peak"
+            description="One of the best meteor showers, producing up to 60 meteors per hour at its peak."
+          />
+          <EventCard
+            date="2027"
+            title="VERITAS Mission to Venus"
+            description="NASA's mission to map Venus's surface and study its geological history."
+          />
+          <EventCard
+            date="April 13, 2029"
+            title="Apophis Close Approach"
+            description="The near-Earth asteroid Apophis will pass extremely close to Earth, visible to the naked eye."
+          />
+        </div>
+      </section>
+
       <footer className="container mx-auto py-8 text-center relative z-10">
         <p>&copy; 2024 Space Exploration Initiative. All rights reserved.</p>
       </footer>
@@ -242,6 +278,14 @@ const TimelineEvent = ({ year, title, description }) => (
     </div>
     <h3 className="text-xl font-semibold mb-1">{title}</h3>
     <p className="text-sm text-center">{description}</p>
+  </div>
+);
+
+const EventCard = ({ date, title, description }) => (
+  <div className="bg-blue-800 p-6 rounded-lg">
+    <p className="text-sm font-semibold text-blue-300 mb-2">{date}</p>
+    <h3 className="text-xl font-bold mb-2">{title}</h3>
+    <p className="text-sm">{description}</p>
   </div>
 );
 
