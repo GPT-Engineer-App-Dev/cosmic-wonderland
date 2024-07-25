@@ -113,7 +113,7 @@ const Index = () => {
 
       <section className="container mx-auto py-16 relative z-10">
         <h2 className="text-4xl font-bold mb-8 text-center">Fascinating Space Facts</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           <SpaceFact
             number="1969"
             description="Year humans first walked on the Moon"
@@ -129,6 +129,38 @@ const Index = () => {
           <SpaceFact
             number="8"
             description="Number of planets in our solar system"
+          />
+          <SpaceFact
+            number="13.8 billion"
+            description="Approximate age of the universe in years"
+          />
+          <SpaceFact
+            number="1.3 million"
+            description="Number of Earths that could fit inside the Sun"
+          />
+          <SpaceFact
+            number="-270.45°C"
+            description="Temperature of empty space"
+          />
+          <SpaceFact
+            number="5,000"
+            description="Approximate number of exoplanets discovered as of 2023"
+          />
+          <SpaceFact
+            number="1,000 km/h"
+            description="Speed at which the Earth rotates at the equator"
+          />
+          <SpaceFact
+            number="408 km"
+            description="Average distance of the International Space Station from Earth"
+          />
+          <SpaceFact
+            number="165 years"
+            description="Time it would take to drive to the Sun at highway speed"
+          />
+          <SpaceFact
+            number="1.3 billion"
+            description="Volume of Earth that could fit inside Jupiter"
           />
         </div>
       </section>
