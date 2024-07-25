@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Rocket, Star, Globe } from "lucide-react";
 import { useEffect, useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const Index = () => {
   const [stars, setStars] = useState([]);
@@ -55,9 +63,32 @@ const Index = () => {
       <header className="container mx-auto py-16 text-center relative z-10">
         <h1 className="text-5xl font-bold mb-4">Explore the Cosmos</h1>
         <p className="text-xl mb-8">Embark on a journey through the wonders of space</p>
-        <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-          Start Your Adventure
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              Start Your Adventure
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Embark on Your Space Journey</DialogTitle>
+              <DialogDescription>
+                Discover the wonders of the cosmos and join our community of space enthusiasts.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <p>Here's what you can expect on your journey:</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Learn about the latest space missions</li>
+                <li>Explore interactive star maps</li>
+                <li>Join discussions with fellow space enthusiasts</li>
+                <li>Get updates on astronomical events</li>
+              </ul>
+              <p>Are you ready to explore the final frontier?</p>
+            </div>
+            <Button className="w-full">Sign Up for Updates</Button>
+          </DialogContent>
+        </Dialog>
       </header>
 
       <main className="container mx-auto py-16 relative z-10">
