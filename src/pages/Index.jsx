@@ -111,6 +111,28 @@ const Index = () => {
         </div>
       </main>
 
+      <section className="container mx-auto py-16 relative z-10">
+        <h2 className="text-4xl font-bold mb-8 text-center">Fascinating Space Facts</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <SpaceFact
+            number="1969"
+            description="Year humans first walked on the Moon"
+          />
+          <SpaceFact
+            number="299,792,458"
+            description="Speed of light in meters per second"
+          />
+          <SpaceFact
+            number="~100 billion"
+            description="Estimated number of galaxies in the observable universe"
+          />
+          <SpaceFact
+            number="8"
+            description="Number of planets in our solar system"
+          />
+        </div>
+      </section>
+
       <footer className="container mx-auto py-8 text-center relative z-10">
         <p>&copy; 2024 Space Exploration Initiative. All rights reserved.</p>
       </footer>
@@ -123,6 +145,13 @@ const FeatureCard = ({ icon, title, description }) => (
     {icon}
     <h2 className="text-2xl font-semibold mb-2">{title}</h2>
     <p>{description}</p>
+  </div>
+);
+
+const SpaceFact = ({ number, description }) => (
+  <div className="bg-blue-800 p-6 rounded-lg text-center">
+    <p className="text-4xl font-bold mb-2">{number}</p>
+    <p className="text-sm">{description}</p>
   </div>
 );
 
