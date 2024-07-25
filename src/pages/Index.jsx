@@ -214,7 +214,7 @@ const Index = () => {
       </section>
 
       <section className="container mx-auto py-16 relative z-10">
-        <h2 className="text-4xl font-bold mb-8 text-center">Upcoming Space Events</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center">Future Space Events and Predictions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           <EventCard
             date="2024 Q4"
@@ -232,11 +232,6 @@ const Index = () => {
             description="ESA and Roscosmos plan to launch the Rosalind Franklin rover to Mars."
           />
           <EventCard
-            date="August 12, 2026"
-            title="Perseids Meteor Shower Peak"
-            description="One of the best meteor showers, producing up to 60 meteors per hour at its peak."
-          />
-          <EventCard
             date="2027"
             title="VERITAS Mission to Venus"
             description="NASA's mission to map Venus's surface and study its geological history."
@@ -252,24 +247,54 @@ const Index = () => {
             description="NASA and ESA plan to return samples collected by the Perseverance rover from Mars to Earth."
           />
           <EventCard
-            date="December 14, 2030"
-            title="Total Solar Eclipse"
-            description="A total solar eclipse visible from parts of North America, including parts of Texas and Ohio."
-          />
-          <EventCard
-            date="2033"
-            title="Venus Sample Return"
-            description="Proposed mission to return samples from the surface of Venus, overcoming extreme conditions."
-          />
-          <EventCard
             date="2034"
             title="Europa Clipper Arrival"
             description="NASA's mission to study Jupiter's moon Europa and its potential for hosting life arrives at its destination."
           />
           <EventCard
-            date="2036"
-            title="Comet Halley Perihelion"
-            description="The famous Halley's Comet reaches its closest approach to the Sun, visible from Earth."
+            date="2040s"
+            title="Potential Crewed Mars Mission"
+            description="Various space agencies and private companies aim to send humans to Mars in this decade."
+          />
+          <EventCard
+            date="2050s"
+            title="Lunar Base Establishment"
+            description="Permanent human presence on the Moon could be established, serving as a stepping stone for deep space exploration."
+          />
+          <EventCard
+            date="2060s"
+            title="First Asteroid Mining Operations"
+            description="Commercial exploitation of asteroid resources might begin, potentially revolutionizing space industry."
+          />
+          <EventCard
+            date="2070s"
+            title="Europa Subsurface Exploration"
+            description="Missions to explore the subsurface ocean of Jupiter's moon Europa could search for extraterrestrial life."
+          />
+          <EventCard
+            date="2080s"
+            title="Venus Terraforming Initiatives"
+            description="Early attempts at terraforming Venus might begin, aiming to make its atmosphere more Earth-like."
+          />
+          <EventCard
+            date="2090s"
+            title="Interstellar Probe Launch"
+            description="Advanced propulsion technologies might enable the launch of the first true interstellar space probe."
+          />
+          <EventCard
+            date="22nd Century"
+            title="Potential Exoplanet Colonization"
+            description="Humans might attempt to establish presence on potentially habitable exoplanets discovered in nearby star systems."
+          />
+          <EventCard
+            date="23rd Century"
+            title="Dyson Sphere Construction"
+            description="Theoretical megastructure to capture a star's energy might begin construction, if technologically feasible."
+          />
+          <EventCard
+            date="Far Future"
+            title="Galactic Colonization"
+            description="Speculative era where humanity might spread across the Milky Way galaxy, if faster-than-light travel becomes possible."
           />
         </div>
       </section>
