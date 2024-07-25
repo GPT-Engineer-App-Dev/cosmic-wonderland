@@ -165,6 +165,54 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="container mx-auto py-16 relative z-10">
+        <h2 className="text-4xl font-bold mb-8 text-center">Space Mission Timeline</h2>
+        <div className="overflow-x-auto">
+          <div className="flex space-x-8 pb-4" style={{ width: "max-content" }}>
+            <TimelineEvent
+              year="1957"
+              title="Sputnik 1"
+              description="First artificial satellite in orbit"
+            />
+            <TimelineEvent
+              year="1961"
+              title="Vostok 1"
+              description="First human in space (Yuri Gagarin)"
+            />
+            <TimelineEvent
+              year="1969"
+              title="Apollo 11"
+              description="First humans on the Moon"
+            />
+            <TimelineEvent
+              year="1990"
+              title="Hubble Space Telescope"
+              description="Launch of the iconic space telescope"
+            />
+            <TimelineEvent
+              year="1998"
+              title="International Space Station"
+              description="Beginning of ISS assembly in orbit"
+            />
+            <TimelineEvent
+              year="2012"
+              title="Curiosity Rover"
+              description="Mars Science Laboratory lands on Mars"
+            />
+            <TimelineEvent
+              year="2015"
+              title="New Horizons"
+              description="First flyby of Pluto"
+            />
+            <TimelineEvent
+              year="2022"
+              title="James Webb Space Telescope"
+              description="Most powerful space telescope begins operations"
+            />
+          </div>
+        </div>
+      </section>
+
       <footer className="container mx-auto py-8 text-center relative z-10">
         <p>&copy; 2024 Space Exploration Initiative. All rights reserved.</p>
       </footer>
@@ -184,6 +232,16 @@ const SpaceFact = ({ number, description }) => (
   <div className="bg-blue-800 p-6 rounded-lg text-center">
     <p className="text-4xl font-bold mb-2">{number}</p>
     <p className="text-sm">{description}</p>
+  </div>
+);
+
+const TimelineEvent = ({ year, title, description }) => (
+  <div className="flex flex-col items-center w-64">
+    <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mb-2">
+      {year}
+    </div>
+    <h3 className="text-xl font-semibold mb-1">{title}</h3>
+    <p className="text-sm text-center">{description}</p>
   </div>
 );
 
