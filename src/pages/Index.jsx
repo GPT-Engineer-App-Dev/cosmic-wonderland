@@ -215,7 +215,7 @@ const Index = () => {
 
       <section className="container mx-auto py-16 relative z-10">
         <h2 className="text-4xl font-bold mb-8 text-center">Upcoming Space Events</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           <EventCard
             date="2024 Q4"
             title="Artemis II Mission"
@@ -245,6 +245,31 @@ const Index = () => {
             date="April 13, 2029"
             title="Apophis Close Approach"
             description="The near-Earth asteroid Apophis will pass extremely close to Earth, visible to the naked eye."
+          />
+          <EventCard
+            date="2030"
+            title="Mars Sample Return"
+            description="NASA and ESA plan to return samples collected by the Perseverance rover from Mars to Earth."
+          />
+          <EventCard
+            date="December 14, 2030"
+            title="Total Solar Eclipse"
+            description="A total solar eclipse visible from parts of North America, including parts of Texas and Ohio."
+          />
+          <EventCard
+            date="2033"
+            title="Venus Sample Return"
+            description="Proposed mission to return samples from the surface of Venus, overcoming extreme conditions."
+          />
+          <EventCard
+            date="2034"
+            title="Europa Clipper Arrival"
+            description="NASA's mission to study Jupiter's moon Europa and its potential for hosting life arrives at its destination."
+          />
+          <EventCard
+            date="2036"
+            title="Comet Halley Perihelion"
+            description="The famous Halley's Comet reaches its closest approach to the Sun, visible from Earth."
           />
         </div>
       </section>
