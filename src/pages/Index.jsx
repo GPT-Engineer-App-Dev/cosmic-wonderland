@@ -1,34 +1,53 @@
 import { Button } from "@/components/ui/button";
 import { Rocket, Star, Globe } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Index = () => {
+  const [stars, setStars] = useState([]);
+
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes twinkle {
-        0% { opacity: 0; }
-        50% { opacity: 1; }
-        100% { opacity: 0; }
+      @keyframes move {
+        0% {
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(3);
+          opacity: 0;
+        }
       }
     `;
     document.head.appendChild(style);
+
+    const newStars = Array.from({ length: 200 }, () => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      animationDuration: `${Math.random() * 3 + 2}s`,
+      animationDelay: `${Math.random() * 3}s`,
+    }));
+    setStars(newStars);
+
     return () => document.head.removeChild(style);
   }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-blue-900 text-white relative overflow-hidden">
       <div className="star-field absolute inset-0">
-        {[...Array(100)].map((_, i) => (
+        {stars.map((star, i) => (
           <div
             key={i}
             className="star absolute rounded-full bg-white"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 2 + 1}px`,
-              height: `${Math.random() * 2 + 1}px`,
-              animation: `twinkle ${Math.random() * 4 + 2}s infinite ${Math.random() * 2}s`,
+              top: star.top,
+              left: star.left,
+              width: '2px',
+              height: '2px',
+              animation: `move ${star.animationDuration} infinite ${star.animationDelay}`,
             }}
           />
         ))}
